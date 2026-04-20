@@ -6,141 +6,66 @@
   <title>Seed Regulation Monitor Published</title>
   <link rel="icon" href="./favicon.ico" sizes="any">
   <link rel="stylesheet" href="./assets/published-site.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <div class="page-shell">
     <header class="hero">
       <p class="eyebrow">Published Snapshot</p>
       <h1>Seed Regulation Monitor</h1>
-      <p class="hero-text">대시보드의 주요 요약을 유지하고, 게시중으로 승인된 규제·뉴스·신품종 항목만 공개용으로 정리한 버전입니다.</p>
+      <p class="hero-text">대시보드의 요약 배치를 유지하면서, 게시중으로 승인된 항목만 공개용으로 정리한 버전입니다.</p>
       <div class="hero-meta">
-        <span>발행 시각 2026-04-16 17:33 (Asia/Seoul)</span>
+        <span>발행 시각 2026-04-20 14:07 (Asia/Seoul)</span>
         <a href="https://leeshelijah-spec.github.io/">현재 사이트 열기</a>
       </div>
     </header>
 
     <main class="content-stack">
       <section class="panel">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Overview</p>
-            <h2>규제 모니터링 현황</h2>
-          </div>
-        </div>
-        <div class="metric-grid">
-          <article class="metric-card">
-            <span>오늘 신규 건수</span>
-            <strong>18</strong>
-          </article>
-          <article class="metric-card">
-            <span>게시중 건수</span>
-            <strong>6</strong>
-          </article>
-          <article class="metric-card">
-            <span>시행일 임박 건수</span>
-            <strong>0</strong>
-          </article>
-        </div>
-        <div class="summary-grid two-column">
-          <div class="summary-card">
-            <h3>규제 중요도</h3>
+        <div class="summary-grid four-column">
+          <article class="summary-card">
+            <h2>규제모니터링현황</h2>
             <ul>
-              
-              <li><strong>검토필요</strong><span>30건</span></li>
-              
+              <li><strong>오늘 신규 건수</strong><span>0</span></li>
+              <li><strong>게시중 건수</strong><span>13</span></li>
+              <li><strong>시행일 임박건수</strong><span>0</span></li>
             </ul>
-          </div>
-          <div class="summary-card">
-            <h3>검토 반영 현황</h3>
-            <ul>
-              
-              <li><strong>미확인</strong><span>16건</span></li>
-              
-              <li><strong>해당없음</strong><span>10건</span></li>
-              
-              <li><strong>조치완료</strong><span>4건</span></li>
-              
-            </ul>
-          </div>
-        </div>
-      </section>
+          </article>
 
-      <section class="panel">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Overview</p>
-            <h2>뉴스 기반 산업 트렌드/대응 분석</h2>
-          </div>
-        </div>
-        <div class="metric-grid">
-          <article class="metric-card">
-            <span>최근 7일 기사 수</span>
-            <strong>209</strong>
-          </article>
-          <article class="metric-card">
-            <span>중요 이상 기사</span>
-            <strong>16</strong>
-          </article>
-          <article class="metric-card">
-            <span>즉시조치 기사</span>
-            <strong>3</strong>
-          </article>
-        </div>
-        <div class="summary-grid two-column">
-          <div class="summary-card">
-            <h3>가장 많이 언급된 주제</h3>
+          <article class="summary-card">
+            <h2>네이버뉴스기반 산업 트렌드</h2>
             <ul>
               
-              <li><strong>기술·품종</strong><span>70건</span></li>
+              <li><strong>시장수급</strong><span>55건</span></li>
               
-              <li><strong>시장수급</strong><span>50건</span></li>
+              <li><strong>기술·품종</strong><span>52건</span></li>
               
               <li><strong>기후·병해충</strong><span>31건</span></li>
               
-              <li><strong>규제/정책</strong><span>29건</span></li>
+              <li><strong>규제/정책</strong><span>27건</span></li>
               
-              <li><strong>경쟁사동향</strong><span>8건</span></li>
-              
-            </ul>
-          </div>
-          <div class="summary-card">
-            <h3>경영 요약</h3>
-            <ul>
-              
-              <li>최근 7일 동안 &#39;기술·품종&#39; 이슈가 71건으로 가장 많이 포착되었습니다.</li>
-              
-              <li>최근 7일 동안 &#39;시장수급&#39; 이슈가 55건으로 가장 많이 포착되었습니다.</li>
-              
-              <li>최근 7일 동안 &#39;기후·병해충&#39; 이슈가 32건으로 가장 많이 포착되었습니다.</li>
+              <li><strong>소비트렌드</strong><span>11건</span></li>
               
             </ul>
-          </div>
-        </div>
-      </section>
+          </article>
 
-      <section class="panel">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Overview</p>
+          <article class="summary-card">
+            <h2>분석현황</h2>
+            <ul>
+              <li><strong>기사건수</strong><span>303</span></li>
+            </ul>
+            <div style="height: 220px; margin-top: 16px;">
+              <canvas id="publishedKeywordChart"></canvas>
+            </div>
+          </article>
+
+          <article class="summary-card">
             <h2>품종보호출원현황</h2>
-          </div>
-        </div>
-        <div class="metric-grid four-column">
-          <article class="metric-card">
-            <span>전체 건수</span>
-            <strong>26</strong>
-          </article>
-          <article class="metric-card">
-            <span>당사 건수</span>
-            <strong>3</strong>
-          </article>
-          <article class="metric-card">
-            <span>타사 건수</span>
-            <strong>23</strong>
-          </article>
-          <article class="metric-card">
-            <span>게시중 건수</span>
-            <strong>3</strong>
+            <ul>
+              <li><strong>출원건수</strong><span>7</span></li>
+              <li><strong>등록건수</strong><span>0</span></li>
+              <li><strong>유효기한 임박건수</strong><span>0</span></li>
+            </ul>
           </article>
         </div>
       </section>
@@ -168,49 +93,59 @@
             <tbody>
               
               <tr>
-                <td><a href="https://www.law.go.kr/DRF/lawService.do?OC=cdotsa&amp;target=law&amp;MST=265959&amp;type=HTML&amp;mobileYn=&amp;efYd=20251023" target="_blank" rel="noreferrer">근로기준법</a></td>
-                <td>고용노동부</td>
-                <td>2025-10-23</td>
-                <td><span class="badge">검토필요</span></td>
-                <td>조치완료</td>
-                <td>품질관리</td>
-                <td>SCM, 연구</td>
-              </tr>
-              
-              <tr>
-                <td><a href="https://www.law.go.kr/DRF/lawService.do?OC=cdotsa&amp;target=law&amp;MST=279525&amp;type=HTML&amp;mobileYn=&amp;efYd=20251031" target="_blank" rel="noreferrer">농수산물 품질관리법 시행규칙</a></td>
+                <td><a href="https://www.law.go.kr/DRF/lawService.do?OC=cdotsa&amp;target=law&amp;MST=285591&amp;type=HTML&amp;mobileYn=&amp;efYd=20260417" target="_blank" rel="noreferrer">농수산물 품질관리법 시행규칙</a></td>
                 <td>농림축산식품부,해양수산부</td>
-                <td>2025-10-31</td>
+                <td>2026-04-17</td>
                 <td><span class="badge">검토필요</span></td>
-                <td>해당없음</td>
+                <td>미확인</td>
                 <td>품질관리</td>
-                <td>SCM, 연구</td>
+                <td></td>
               </tr>
               
               <tr>
-                <td><a href="https://www.law.go.kr/DRF/lawService.do?OC=cdotsa&amp;target=law&amp;MST=279527&amp;type=HTML&amp;mobileYn=&amp;efYd=20251031" target="_blank" rel="noreferrer">농약관리법 시행규칙</a></td>
-                <td>농촌진흥청,농림축산식품부</td>
-                <td>2025-10-31</td>
+                <td><a href="https://www.law.go.kr/DRF/lawService.do?OC=cdotsa&amp;target=law&amp;MST=285301&amp;type=HTML&amp;mobileYn=&amp;efYd=20260401" target="_blank" rel="noreferrer">교통ㆍ에너지ㆍ환경세법 시행령</a></td>
+                <td>재정경제부</td>
+                <td>2026-04-01</td>
                 <td><span class="badge">검토필요</span></td>
-                <td>해당없음</td>
-                <td>계약·거래, 농자재·재배환경, 환경안전</td>
-                <td>영업, 법무, 연구, SCM</td>
+                <td>미확인</td>
+                <td>환경안전</td>
+                <td></td>
               </tr>
               
               <tr>
-                <td><a href="https://www.law.go.kr/DRF/lawService.do?OC=cdotsa&amp;target=law&amp;MST=284737&amp;type=HTML&amp;mobileYn=&amp;efYd=20260324" target="_blank" rel="noreferrer">독점규제 및 공정거래에 관한 법률 시행령</a></td>
-                <td>공정거래위원회</td>
-                <td>2026-03-24</td>
+                <td><a href="https://www.law.go.kr/DRF/lawService.do?OC=cdotsa&amp;target=law&amp;MST=281915&amp;type=HTML&amp;mobileYn=&amp;efYd=20260331" target="_blank" rel="noreferrer">환경보건법</a></td>
+                <td>기후에너지환경부</td>
+                <td>2026-03-31</td>
                 <td><span class="badge">검토필요</span></td>
-                <td>해당없음</td>
-                <td>계약·거래</td>
-                <td>영업, 법무</td>
+                <td>미확인</td>
+                <td>환경안전</td>
+                <td></td>
               </tr>
               
               <tr>
-                <td><a href="https://www.law.go.kr/DRF/lawService.do?OC=cdotsa&amp;target=law&amp;MST=285113&amp;type=HTML&amp;mobileYn=&amp;efYd=20260324" target="_blank" rel="noreferrer">종자산업법 시행규칙</a></td>
+                <td><a href="https://www.law.go.kr/DRF/lawService.do?OC=cdotsa&amp;target=law&amp;MST=281911&amp;type=HTML&amp;mobileYn=&amp;efYd=20260331" target="_blank" rel="noreferrer">토양환경보전법</a></td>
+                <td>기후에너지환경부</td>
+                <td>2026-03-31</td>
+                <td><span class="badge">검토필요</span></td>
+                <td>미확인</td>
+                <td>농자재·재배환경, 환경안전</td>
+                <td></td>
+              </tr>
+              
+              <tr>
+                <td><a href="https://www.law.go.kr/DRF/lawService.do?OC=cdotsa&amp;target=law&amp;MST=285051&amp;type=HTML&amp;mobileYn=&amp;efYd=20260330" target="_blank" rel="noreferrer">전공의의 수련환경 개선 및 지위 향상을 위한 법률 시행령</a></td>
+                <td>보건복지부</td>
+                <td>2026-03-30</td>
+                <td><span class="badge">검토필요</span></td>
+                <td>미확인</td>
+                <td>환경안전</td>
+                <td></td>
+              </tr>
+              
+              <tr>
+                <td><a href="https://www.law.go.kr/DRF/lawService.do?OC=cdotsa&amp;target=law&amp;MST=270129&amp;type=HTML&amp;mobileYn=&amp;efYd=20260326" target="_blank" rel="noreferrer">종자산업법 시행령</a></td>
                 <td>농림축산식품부</td>
-                <td>2026-03-24</td>
+                <td>2026-03-26</td>
                 <td><span class="badge">검토필요</span></td>
                 <td>해당없음</td>
                 <td>종자생산</td>
@@ -225,6 +160,66 @@
                 <td>조치완료</td>
                 <td>지식재산·육종권</td>
                 <td>연구, 법무</td>
+              </tr>
+              
+              <tr>
+                <td><a href="https://www.law.go.kr/DRF/lawService.do?OC=cdotsa&amp;target=law&amp;MST=285113&amp;type=HTML&amp;mobileYn=&amp;efYd=20260324" target="_blank" rel="noreferrer">종자산업법 시행규칙</a></td>
+                <td>농림축산식품부</td>
+                <td>2026-03-24</td>
+                <td><span class="badge">검토필요</span></td>
+                <td>해당없음</td>
+                <td>종자생산</td>
+                <td>SCM, 연구</td>
+              </tr>
+              
+              <tr>
+                <td><a href="https://www.law.go.kr/DRF/lawService.do?OC=cdotsa&amp;target=law&amp;MST=284737&amp;type=HTML&amp;mobileYn=&amp;efYd=20260324" target="_blank" rel="noreferrer">독점규제 및 공정거래에 관한 법률 시행령</a></td>
+                <td>공정거래위원회</td>
+                <td>2026-03-24</td>
+                <td><span class="badge">검토필요</span></td>
+                <td>해당없음</td>
+                <td>계약·거래</td>
+                <td>영업, 법무</td>
+              </tr>
+              
+              <tr>
+                <td><a href="https://www.law.go.kr/DRF/lawService.do?OC=cdotsa&amp;target=law&amp;MST=285109&amp;type=HTML&amp;mobileYn=&amp;efYd=20260324" target="_blank" rel="noreferrer">농약관리법 시행규칙</a></td>
+                <td>농촌진흥청,농림축산식품부</td>
+                <td>2026-03-24</td>
+                <td><span class="badge">검토필요</span></td>
+                <td>해당없음</td>
+                <td>계약·거래, 농자재·재배환경, 환경안전</td>
+                <td>영업, 법무, 연구, SCM</td>
+              </tr>
+              
+              <tr>
+                <td><a href="https://www.law.go.kr/DRF/lawService.do?OC=cdotsa&amp;target=law&amp;MST=265959&amp;type=HTML&amp;mobileYn=&amp;efYd=20251023" target="_blank" rel="noreferrer">근로기준법</a></td>
+                <td>고용노동부</td>
+                <td>2025-10-23</td>
+                <td><span class="badge">검토필요</span></td>
+                <td>조치완료</td>
+                <td>품질관리</td>
+                <td></td>
+              </tr>
+              
+              <tr>
+                <td><a href="https://www.law.go.kr/DRF/lawService.do?OC=cdotsa&amp;target=law&amp;MST=276815&amp;type=HTML&amp;mobileYn=&amp;efYd=20251001" target="_blank" rel="noreferrer">화학물질관리법</a></td>
+                <td>기후에너지환경부</td>
+                <td>2025-10-01</td>
+                <td><span class="badge">검토필요</span></td>
+                <td>미확인</td>
+                <td>환경안전</td>
+                <td></td>
+              </tr>
+              
+              <tr>
+                <td><a href="https://www.law.go.kr/DRF/lawService.do?OC=cdotsa&amp;target=law&amp;MST=276853&amp;type=HTML&amp;mobileYn=&amp;efYd=20251001" target="_blank" rel="noreferrer">산업안전보건법</a></td>
+                <td>고용노동부</td>
+                <td>2025-10-01</td>
+                <td><span class="badge">검토필요</span></td>
+                <td>미확인</td>
+                <td>환경안전</td>
+                <td></td>
               </tr>
               
             </tbody>
@@ -252,6 +247,162 @@
               </tr>
             </thead>
             <tbody>
+              
+              
+              <tr>
+                <td>
+                  <strong>밀양 무안 고추 축제, 아삭한 매운맛으로 관광객 유혹</strong>
+                  <p class="subtext">www.viva100.com</p>
+                </td>
+                <td>2026-05-04</td>
+                <td>고추</td>
+                <td>소비트렌드</td>
+                <td><span class="badge">참고</span></td>
+                <td><a href="https://www.viva100.com/article/20260420500730" target="_blank" rel="noreferrer">원문 보기</a></td>
+              </tr>
+              
+              
+              <tr>
+                <td>
+                  <strong>농촌진흥청, 고랭지배추 &#39;씨스트선충&#39; 방제 당부</strong>
+                  <p class="subtext">www.m-i.kr / 외 3건</p>
+                </td>
+                <td>2026-05-04</td>
+                <td>검역, 배추, 병해충</td>
+                <td>기후·병해충</td>
+                <td><span class="badge">중요</span></td>
+                <td><a href="https://www.m-i.kr/news/articleView.html?idxno=1365891" target="_blank" rel="noreferrer">원문 보기</a></td>
+              </tr>
+              
+              
+              <tr>
+                <td>
+                  <strong>전국 최대 스마트 육묘장 준공</strong>
+                  <p class="subtext">www.nongmin.com</p>
+                </td>
+                <td>2026-05-04</td>
+                <td>고추</td>
+                <td>기술·품종</td>
+                <td><span class="badge">참고</span></td>
+                <td><a href="https://www.nongmin.com/article/20260417500647" target="_blank" rel="noreferrer">원문 보기</a></td>
+              </tr>
+              
+              
+              <tr>
+                <td>
+                  <strong>[김소형의 본초 테라피] 봄부터 즐기는 과일 ‘참외’</strong>
+                  <p class="subtext">www.metroseoul.co.kr</p>
+                </td>
+                <td>2026-05-04</td>
+                <td>수박, 오이, 참외</td>
+                <td>규제/정책</td>
+                <td><span class="badge">참고</span></td>
+                <td><a href="http://www.metroseoul.co.kr/article/20260330500170" target="_blank" rel="noreferrer">원문 보기</a></td>
+              </tr>
+              
+              
+              <tr>
+                <td>
+                  <strong>‘소양강 토마토 ’ 생산·판매 전방위 지원</strong>
+                  <p class="subtext">www.nongmin.com</p>
+                </td>
+                <td>2026-05-04</td>
+                <td>토마토</td>
+                <td>시장수급</td>
+                <td><span class="badge">참고</span></td>
+                <td><a href="https://www.nongmin.com/article/20260417500764" target="_blank" rel="noreferrer">원문 보기</a></td>
+              </tr>
+              
+              
+              <tr>
+                <td>
+                  <strong>포장재는 오르고 수요는 줄고...두 번 우는 상추 농가</strong>
+                  <p class="subtext">www.ytn.co.kr / 외 1건</p>
+                </td>
+                <td>2026-05-04</td>
+                <td>상추</td>
+                <td>시장수급</td>
+                <td><span class="badge">참고</span></td>
+                <td><a href="https://www.ytn.co.kr/_ln/0115_202604192323050310" target="_blank" rel="noreferrer">원문 보기</a></td>
+              </tr>
+              
+              
+              <tr>
+                <td>
+                  <strong>도로에서 파는 찰옥수수 어디서 오나 했더니…국민 여름 간식 원조는 ‘...</strong>
+                  <p class="subtext">www.wikitree.co.kr</p>
+                </td>
+                <td>2026-05-04</td>
+                <td>고추, 배추</td>
+                <td>기술·품종</td>
+                <td><span class="badge">참고</span></td>
+                <td><a href="https://www.wikitree.co.kr/articles/1132339" target="_blank" rel="noreferrer">원문 보기</a></td>
+              </tr>
+              
+              
+              <tr>
+                <td>
+                  <strong>고추 보관할 때 일단 &#39;이 부분&#39;을 제거해 주세요…알아두면 평생 써먹어...</strong>
+                  <p class="subtext">www.wikitree.co.kr</p>
+                </td>
+                <td>2026-05-04</td>
+                <td>고추</td>
+                <td>시장수급</td>
+                <td><span class="badge">참고</span></td>
+                <td><a href="https://www.wikitree.co.kr/articles/1128930" target="_blank" rel="noreferrer">원문 보기</a></td>
+              </tr>
+              
+              
+              <tr>
+                <td>
+                  <strong>[위클리오늘] 여주시, 토마토뿔나방 확산 방지 위한 선제적 대응 강화</strong>
+                  <p class="subtext">www.weeklytoday.com</p>
+                </td>
+                <td>2026-05-01</td>
+                <td>검역</td>
+                <td>수출입·검역</td>
+                <td><span class="badge">즉시조치</span></td>
+                <td><a href="http://www.weeklytoday.com/news/articleView.html?idxno=771615" target="_blank" rel="noreferrer">원문 보기</a></td>
+              </tr>
+              
+              
+              <tr>
+                <td>
+                  <strong>고양시, 고양국제꽃박람회 24일 개막</strong>
+                  <p class="subtext">www.discoverynews.kr / 외 2건</p>
+                </td>
+                <td>2026-05-04</td>
+                <td>식물신품종</td>
+                <td>기술·품종</td>
+                <td><span class="badge">검토필요</span></td>
+                <td><a href="https://www.discoverynews.kr/news/articleView.html?idxno=1089285" target="_blank" rel="noreferrer">원문 보기</a></td>
+              </tr>
+              
+              
+              <tr>
+                <td>
+                  <strong>괴산군, 대한민국 대표 축제 박람회서 &#39;빨간맛&#39; 매력 전파</strong>
+                  <p class="subtext">www.jbnews.com</p>
+                </td>
+                <td>2026-05-04</td>
+                <td>고추</td>
+                <td>시장수급</td>
+                <td><span class="badge">참고</span></td>
+                <td><a href="https://www.jbnews.com/news/articleView.html?idxno=1502514" target="_blank" rel="noreferrer">원문 보기</a></td>
+              </tr>
+              
+              
+              <tr>
+                <td>
+                  <strong>&#39;생생정보&#39; 성주 참외 , 제철 맞은 황금빛 과일</strong>
+                  <p class="subtext">www.stardailynews.co.kr</p>
+                </td>
+                <td>2026-05-04</td>
+                <td>참외</td>
+                <td>시장수급</td>
+                <td><span class="badge">참고</span></td>
+                <td><a href="https://www.stardailynews.co.kr/news/articleView.html?idxno=532094" target="_blank" rel="noreferrer">원문 보기</a></td>
+              </tr>
               
               
               <tr>
@@ -290,19 +441,6 @@
                 <td>기후·병해충</td>
                 <td><span class="badge">참고</span></td>
                 <td><a href="https://www.etnews.com/20260416000197" target="_blank" rel="noreferrer">원문 보기</a></td>
-              </tr>
-              
-              
-              <tr>
-                <td>
-                  <strong>호수를 물들이는 꽃, 꽃, 꽃… 2026 고양국제꽃박람회 개막</strong>
-                  <p class="subtext">www.metroseoul.co.kr</p>
-                </td>
-                <td>2026-04-30</td>
-                <td>식물신품종</td>
-                <td>기술·품종</td>
-                <td><span class="badge">검토필요</span></td>
-                <td><a href="http://www.metroseoul.co.kr/article/20260414500554" target="_blank" rel="noreferrer">원문 보기</a></td>
               </tr>
               
               
@@ -429,5 +567,50 @@
       </section>
     </main>
   </div>
+
+  <script>
+    const keywordSeries = [{"day": "2026-03-25", "keyword": "\uc2dd\ubb3c\uc2e0\ud488\uc885", "value": 1}, {"day": "2026-03-26", "keyword": "\uc2dd\ubb3c\uc2e0\ud488\uc885", "value": 1}, {"day": "2026-03-27", "keyword": "\uc2dd\ubb3c\uc2e0\ud488\uc885", "value": 2}, {"day": "2026-03-30", "keyword": "\uc2dd\ubb3c\uc2e0\ud488\uc885", "value": 3}, {"day": "2026-03-31", "keyword": "\uc2dd\ubb3c\uc2e0\ud488\uc885", "value": 1}, {"day": "2026-03-31", "keyword": "\uc885\uc790 \uc218\uc785", "value": 4}, {"day": "2026-03-31", "keyword": "\ucc44\uc18c \uc885\uc790", "value": 3}, {"day": "2026-04-01", "keyword": "\uac80\uc5ed", "value": 1}, {"day": "2026-04-01", "keyword": "\uc591\uc0c1\ucd94", "value": 1}, {"day": "2026-04-01", "keyword": "\uc885\uc790 \uc218\uc785", "value": 4}, {"day": "2026-04-01", "keyword": "\uc885\uc790 \uc218\ucd9c", "value": 3}, {"day": "2026-04-01", "keyword": "\ucc44\uc18c \uc885\uc790", "value": 5}, {"day": "2026-04-01", "keyword": "\ud1a0\ub9c8\ud1a0", "value": 2}, {"day": "2026-04-01", "keyword": "\ud488\uc885\ubcf4\ud638", "value": 2}, {"day": "2026-04-02", "keyword": "\uac80\uc5ed", "value": 5}, {"day": "2026-04-02", "keyword": "\uace0\ucd94", "value": 1}, {"day": "2026-04-02", "keyword": "\ub2f9\uadfc", "value": 1}, {"day": "2026-04-02", "keyword": "\ubc30\ucd94", "value": 3}, {"day": "2026-04-02", "keyword": "\ubcd1\ud574\ucda9", "value": 12}, {"day": "2026-04-02", "keyword": "\ube0c\ub85c\ucf5c\ub9ac", "value": 1}, {"day": "2026-04-02", "keyword": "\uc0c1\ucd94", "value": 10}, {"day": "2026-04-02", "keyword": "\uc218\ubc15", "value": 10}, {"day": "2026-04-02", "keyword": "\uc2dc\uae08\uce58", "value": 2}, {"day": "2026-04-02", "keyword": "\uc2dd\ubb3c\uc2e0\ud488\uc885", "value": 1}, {"day": "2026-04-02", "keyword": "\uc591\ubc30\ucd94", "value": 12}, {"day": "2026-04-02", "keyword": "\uc591\uc0c1\ucd94", "value": 1}, {"day": "2026-04-02", "keyword": "\uc624\uc774", "value": 5}, {"day": "2026-04-02", "keyword": "\uc721\uc885", "value": 3}, {"day": "2026-04-02", "keyword": "\uc885\ubb18", "value": 1}, {"day": "2026-04-02", "keyword": "\uc885\uc790 \uc218\uc785", "value": 1}, {"day": "2026-04-02", "keyword": "\uc885\uc790 \uc218\ucd9c", "value": 1}, {"day": "2026-04-02", "keyword": "\uc885\uc790\uc0b0\uc5c5", "value": 9}, {"day": "2026-04-02", "keyword": "\ucc38\uc678", "value": 6}, {"day": "2026-04-02", "keyword": "\ucc44\uc18c \uc885\uc790", "value": 2}, {"day": "2026-04-02", "keyword": "\uccad\uacbd\ucc44", "value": 3}, {"day": "2026-04-02", "keyword": "\ud1a0\ub9c8\ud1a0", "value": 7}, {"day": "2026-04-02", "keyword": "\ud488\uc885\ubcf4\ud638", "value": 7}, {"day": "2026-04-03", "keyword": "\uac80\uc5ed", "value": 1}, {"day": "2026-04-03", "keyword": "\uace0\ucd94", "value": 2}, {"day": "2026-04-03", "keyword": "\ub300\ud30c", "value": 3}, {"day": "2026-04-03", "keyword": "\ubc30\ucd94", "value": 1}, {"day": "2026-04-03", "keyword": "\ubcd1\ud574\ucda9", "value": 5}, {"day": "2026-04-03", "keyword": "\uc0c1\ucd94", "value": 2}, {"day": "2026-04-03", "keyword": "\uc218\ubc15", "value": 1}, {"day": "2026-04-03", "keyword": "\uc2dc\uae08\uce58", "value": 1}, {"day": "2026-04-03", "keyword": "\uc2dd\ubb3c\uc2e0\ud488\uc885", "value": 3}, {"day": "2026-04-03", "keyword": "\uc624\uc774", "value": 3}, {"day": "2026-04-03", "keyword": "\uc885\ubb18", "value": 2}, {"day": "2026-04-03", "keyword": "\uc885\uc790 \uc218\uc785", "value": 2}, {"day": "2026-04-03", "keyword": "\uc885\uc790\uc0b0\uc5c5", "value": 1}, {"day": "2026-04-03", "keyword": "\ucc38\uc678", "value": 4}, {"day": "2026-04-03", "keyword": "\ucc44\uc18c \uc885\uc790", "value": 2}, {"day": "2026-04-03", "keyword": "\ud1a0\ub9c8\ud1a0", "value": 2}, {"day": "2026-04-03", "keyword": "\ud488\uc885\ubcf4\ud638", "value": 6}, {"day": "2026-04-04", "keyword": "\uc885\uc790 \uc218\uc785", "value": 1}, {"day": "2026-04-04", "keyword": "\uccad\uacbd\ucc44", "value": 1}, {"day": "2026-04-04", "keyword": "\ud488\uc885\ubcf4\ud638", "value": 1}, {"day": "2026-04-05", "keyword": "\uc0c1\ucd94", "value": 1}, {"day": "2026-04-05", "keyword": "\uc721\uc885", "value": 2}, {"day": "2026-04-05", "keyword": "\uc885\uc790 \uc218\ucd9c", "value": 1}, {"day": "2026-04-05", "keyword": "\ucc44\uc18c \uc885\uc790", "value": 1}, {"day": "2026-04-06", "keyword": "\uac80\uc5ed", "value": 18}, {"day": "2026-04-06", "keyword": "\uace0\ucd94", "value": 8}, {"day": "2026-04-06", "keyword": "\ub2f9\uadfc", "value": 2}, {"day": "2026-04-06", "keyword": "\ub300\ud30c", "value": 3}, {"day": "2026-04-06", "keyword": "\ubc30\ucd94", "value": 7}, {"day": "2026-04-06", "keyword": "\ubcd1\ud574\ucda9", "value": 19}, {"day": "2026-04-06", "keyword": "\uc0c1\ucd94", "value": 3}, {"day": "2026-04-06", "keyword": "\uc218\ubc15", "value": 4}, {"day": "2026-04-06", "keyword": "\uc2dc\uae08\uce58", "value": 1}, {"day": "2026-04-06", "keyword": "\uc2dd\ubb3c\uc2e0\ud488\uc885", "value": 2}, {"day": "2026-04-06", "keyword": "\uc591\ubc30\ucd94", "value": 4}, {"day": "2026-04-06", "keyword": "\uc591\uc0c1\ucd94", "value": 7}, {"day": "2026-04-06", "keyword": "\uc721\uc885", "value": 9}, {"day": "2026-04-06", "keyword": "\uc885\uc790 \uc218\uc785", "value": 2}, {"day": "2026-04-06", "keyword": "\uc885\uc790 \uc218\ucd9c", "value": 3}, {"day": "2026-04-06", "keyword": "\uc885\uc790\uc0b0\uc5c5", "value": 1}, {"day": "2026-04-06", "keyword": "\ucc38\uc678", "value": 6}, {"day": "2026-04-06", "keyword": "\ucc44\uc18c \uc885\uc790", "value": 2}, {"day": "2026-04-06", "keyword": "\ud1a0\ub9c8\ud1a0", "value": 4}, {"day": "2026-04-06", "keyword": "\ud488\uc885\ubcf4\ud638", "value": 1}, {"day": "2026-04-07", "keyword": "\uac80\uc5ed", "value": 7}, {"day": "2026-04-07", "keyword": "\uace0\ucd94", "value": 5}, {"day": "2026-04-07", "keyword": "\ub300\ud30c", "value": 3}, {"day": "2026-04-07", "keyword": "\ubc30\ucd94", "value": 1}, {"day": "2026-04-07", "keyword": "\ubcd1\ud574\ucda9", "value": 15}, {"day": "2026-04-07", "keyword": "\uc0c1\ucd94", "value": 1}, {"day": "2026-04-07", "keyword": "\uc218\ubc15", "value": 2}, {"day": "2026-04-07", "keyword": "\uc591\ubc30\ucd94", "value": 6}, {"day": "2026-04-07", "keyword": "\uc591\uc0c1\ucd94", "value": 3}, {"day": "2026-04-07", "keyword": "\uc721\uc885", "value": 1}, {"day": "2026-04-07", "keyword": "\uc885\ubb18", "value": 1}, {"day": "2026-04-07", "keyword": "\uc885\uc790 \uc218\ucd9c", "value": 2}, {"day": "2026-04-07", "keyword": "\uc885\uc790\uc0b0\uc5c5", "value": 5}, {"day": "2026-04-07", "keyword": "\ucc38\uc678", "value": 1}, {"day": "2026-04-07", "keyword": "\ucc44\uc18c \uc885\uc790", "value": 3}, {"day": "2026-04-07", "keyword": "\ud1a0\ub9c8\ud1a0", "value": 7}, {"day": "2026-04-07", "keyword": "\ud488\uc885\ubcf4\ud638", "value": 1}, {"day": "2026-04-08", "keyword": "\uac80\uc5ed", "value": 4}, {"day": "2026-04-08", "keyword": "\uace0\ucd94", "value": 3}, {"day": "2026-04-08", "keyword": "\ub300\ud30c", "value": 1}, {"day": "2026-04-08", "keyword": "\ubcd1\ud574\ucda9", "value": 3}, {"day": "2026-04-08", "keyword": "\ube0c\ub85c\ucf5c\ub9ac", "value": 1}, {"day": "2026-04-08", "keyword": "\uc0c1\ucd94", "value": 3}, {"day": "2026-04-08", "keyword": "\uc218\ubc15", "value": 8}, {"day": "2026-04-08", "keyword": "\uc2dc\uae08\uce58", "value": 1}, {"day": "2026-04-08", "keyword": "\uc2dd\ubb3c\uc2e0\ud488\uc885", "value": 2}, {"day": "2026-04-08", "keyword": "\uc591\ubc30\ucd94", "value": 1}, {"day": "2026-04-08", "keyword": "\uc624\uc774", "value": 2}, {"day": "2026-04-08", "keyword": "\uc721\uc885", "value": 5}, {"day": "2026-04-08", "keyword": "\uc885\uc790 \uc218\uc785", "value": 2}, {"day": "2026-04-08", "keyword": "\uc885\uc790\uc0b0\uc5c5", "value": 2}, {"day": "2026-04-08", "keyword": "\ucc38\uc678", "value": 7}, {"day": "2026-04-08", "keyword": "\ucc44\uc18c \uc885\uc790", "value": 2}, {"day": "2026-04-08", "keyword": "\uccad\uacbd\ucc44", "value": 4}, {"day": "2026-04-09", "keyword": "\uace0\ucd94", "value": 1}, {"day": "2026-04-09", "keyword": "\ubcd1\ud574\ucda9", "value": 5}, {"day": "2026-04-09", "keyword": "\uc2dd\ubb3c\uc2e0\ud488\uc885", "value": 1}, {"day": "2026-04-09", "keyword": "\uc721\uc885", "value": 4}, {"day": "2026-04-09", "keyword": "\uc885\uc790 \uc218\uc785", "value": 2}, {"day": "2026-04-09", "keyword": "\uc885\uc790 \uc218\ucd9c", "value": 1}, {"day": "2026-04-09", "keyword": "\uccad\uacbd\ucc44", "value": 1}, {"day": "2026-04-09", "keyword": "\ud1a0\ub9c8\ud1a0", "value": 1}, {"day": "2026-04-09", "keyword": "\ud488\uc885\ubcf4\ud638", "value": 3}, {"day": "2026-04-10", "keyword": "\uace0\ucd94", "value": 3}, {"day": "2026-04-10", "keyword": "\ub300\ud30c", "value": 1}, {"day": "2026-04-10", "keyword": "\ubc30\ucd94", "value": 4}, {"day": "2026-04-10", "keyword": "\ubcd1\ud574\ucda9", "value": 13}, {"day": "2026-04-10", "keyword": "\uc0c1\ucd94", "value": 1}, {"day": "2026-04-10", "keyword": "\uc218\ubc15", "value": 1}, {"day": "2026-04-10", "keyword": "\uc2dc\uae08\uce58", "value": 1}, {"day": "2026-04-10", "keyword": "\uc2dd\ubb3c\uc2e0\ud488\uc885", "value": 1}, {"day": "2026-04-10", "keyword": "\uc591\ubc30\ucd94", "value": 1}, {"day": "2026-04-10", "keyword": "\uc624\uc774", "value": 1}, {"day": "2026-04-10", "keyword": "\uc721\uc885", "value": 2}, {"day": "2026-04-10", "keyword": "\uc885\uc790 \uc218\uc785", "value": 1}, {"day": "2026-04-10", "keyword": "\uc885\uc790 \uc218\ucd9c", "value": 2}, {"day": "2026-04-10", "keyword": "\uc885\uc790\uc0b0\uc5c5", "value": 3}, {"day": "2026-04-10", "keyword": "\ucc38\uc678", "value": 2}, {"day": "2026-04-10", "keyword": "\ud1a0\ub9c8\ud1a0", "value": 1}, {"day": "2026-04-10", "keyword": "\ud488\uc885\ubcf4\ud638", "value": 3}, {"day": "2026-04-11", "keyword": "\uc885\uc790 \uc218\uc785", "value": 1}, {"day": "2026-04-11", "keyword": "\ud488\uc885\ubcf4\ud638", "value": 1}, {"day": "2026-04-12", "keyword": "\uc721\uc885", "value": 1}, {"day": "2026-04-12", "keyword": "\uc885\uc790\uc0b0\uc5c5", "value": 2}, {"day": "2026-04-13", "keyword": "\uace0\ucd94", "value": 3}, {"day": "2026-04-13", "keyword": "\ubc30\ucd94", "value": 3}, {"day": "2026-04-13", "keyword": "\ubcd1\ud574\ucda9", "value": 6}, {"day": "2026-04-13", "keyword": "\ube0c\ub85c\ucf5c\ub9ac", "value": 1}, {"day": "2026-04-13", "keyword": "\uc624\uc774", "value": 1}, {"day": "2026-04-13", "keyword": "\uc721\uc885", "value": 2}, {"day": "2026-04-13", "keyword": "\uc885\uc790 \uc218\uc785", "value": 3}, {"day": "2026-04-13", "keyword": "\uc885\uc790 \uc218\ucd9c", "value": 1}, {"day": "2026-04-13", "keyword": "\uc885\uc790\uc0b0\uc5c5", "value": 4}, {"day": "2026-04-13", "keyword": "\ucc38\uc678", "value": 5}, {"day": "2026-04-13", "keyword": "\ucc44\uc18c \uc885\uc790", "value": 1}, {"day": "2026-04-13", "keyword": "\ud1a0\ub9c8\ud1a0", "value": 3}, {"day": "2026-04-13", "keyword": "\ud488\uc885\ubcf4\ud638", "value": 5}, {"day": "2026-04-14", "keyword": "\uac80\uc5ed", "value": 5}, {"day": "2026-04-14", "keyword": "\uace0\ucd94", "value": 6}, {"day": "2026-04-14", "keyword": "\ubc30\ucd94", "value": 5}, {"day": "2026-04-14", "keyword": "\ubcd1\ud574\ucda9", "value": 18}, {"day": "2026-04-14", "keyword": "\uc0c1\ucd94", "value": 2}, {"day": "2026-04-14", "keyword": "\uc218\ubc15", "value": 4}, {"day": "2026-04-14", "keyword": "\uc2dc\uae08\uce58", "value": 1}, {"day": "2026-04-14", "keyword": "\uc2dd\ubb3c\uc2e0\ud488\uc885", "value": 1}, {"day": "2026-04-14", "keyword": "\uc591\ubc30\ucd94", "value": 6}, {"day": "2026-04-14", "keyword": "\uc624\uc774", "value": 8}, {"day": "2026-04-14", "keyword": "\uc885\ubb18", "value": 1}, {"day": "2026-04-14", "keyword": "\uc885\uc790 \uc218\uc785", "value": 1}, {"day": "2026-04-14", "keyword": "\uc885\uc790 \uc218\ucd9c", "value": 1}, {"day": "2026-04-14", "keyword": "\uc885\uc790\uc0b0\uc5c5", "value": 1}, {"day": "2026-04-14", "keyword": "\ucc38\uc678", "value": 8}, {"day": "2026-04-14", "keyword": "\ucc44\uc18c \uc885\uc790", "value": 2}, {"day": "2026-04-14", "keyword": "\ud1a0\ub9c8\ud1a0", "value": 7}, {"day": "2026-04-14", "keyword": "\ud488\uc885\ubcf4\ud638", "value": 3}, {"day": "2026-04-15", "keyword": "\uc2dc\uae08\uce58", "value": 3}, {"day": "2026-04-15", "keyword": "\uc2dd\ubb3c\uc2e0\ud488\uc885", "value": 1}, {"day": "2026-04-15", "keyword": "\uc721\uc885", "value": 3}, {"day": "2026-04-15", "keyword": "\uc885\uc790 \uc218\uc785", "value": 2}, {"day": "2026-04-15", "keyword": "\uc885\uc790 \uc218\ucd9c", "value": 1}, {"day": "2026-04-15", "keyword": "\ucc44\uc18c \uc885\uc790", "value": 2}, {"day": "2026-04-15", "keyword": "\ud488\uc885\ubcf4\ud638", "value": 1}, {"day": "2026-04-16", "keyword": "\uac80\uc5ed", "value": 2}, {"day": "2026-04-16", "keyword": "\uace0\ucd94", "value": 7}, {"day": "2026-04-16", "keyword": "\ub300\ud30c", "value": 1}, {"day": "2026-04-16", "keyword": "\ubc30\ucd94", "value": 1}, {"day": "2026-04-16", "keyword": "\ubcd1\ud574\ucda9", "value": 7}, {"day": "2026-04-16", "keyword": "\ube0c\ub85c\ucf5c\ub9ac", "value": 3}, {"day": "2026-04-16", "keyword": "\uc0c1\ucd94", "value": 2}, {"day": "2026-04-16", "keyword": "\uc2dc\uae08\uce58", "value": 1}, {"day": "2026-04-16", "keyword": "\uc591\ubc30\ucd94", "value": 5}, {"day": "2026-04-16", "keyword": "\uc591\uc0c1\ucd94", "value": 1}, {"day": "2026-04-16", "keyword": "\uc624\uc774", "value": 4}, {"day": "2026-04-16", "keyword": "\uc885\uc790 \uc218\uc785", "value": 1}, {"day": "2026-04-16", "keyword": "\ucc38\uc678", "value": 2}, {"day": "2026-04-16", "keyword": "\ucc44\uc18c \uc885\uc790", "value": 3}, {"day": "2026-04-16", "keyword": "\ud488\uc885\ubcf4\ud638", "value": 3}, {"day": "2026-04-17", "keyword": "\uac80\uc5ed", "value": 3}, {"day": "2026-04-17", "keyword": "\uace0\ucd94", "value": 1}, {"day": "2026-04-17", "keyword": "\ubcd1\ud574\ucda9", "value": 4}, {"day": "2026-04-17", "keyword": "\uc218\ubc15", "value": 1}, {"day": "2026-04-17", "keyword": "\uc2dd\ubb3c\uc2e0\ud488\uc885", "value": 8}, {"day": "2026-04-17", "keyword": "\uc624\uc774", "value": 1}, {"day": "2026-04-17", "keyword": "\uc885\ubb18", "value": 1}, {"day": "2026-04-17", "keyword": "\uc885\uc790 \uc218\ucd9c", "value": 2}, {"day": "2026-04-17", "keyword": "\uc885\uc790\uc0b0\uc5c5", "value": 2}, {"day": "2026-04-17", "keyword": "\ucc38\uc678", "value": 2}, {"day": "2026-04-17", "keyword": "\ucc44\uc18c \uc885\uc790", "value": 1}, {"day": "2026-04-19", "keyword": "\uac80\uc5ed", "value": 1}, {"day": "2026-04-19", "keyword": "\uace0\ucd94", "value": 2}, {"day": "2026-04-19", "keyword": "\ubc30\ucd94", "value": 1}, {"day": "2026-04-19", "keyword": "\ubcd1\ud574\ucda9", "value": 5}, {"day": "2026-04-19", "keyword": "\uc0c1\ucd94", "value": 2}, {"day": "2026-04-19", "keyword": "\uc218\ubc15", "value": 1}, {"day": "2026-04-19", "keyword": "\uc2dc\uae08\uce58", "value": 1}, {"day": "2026-04-19", "keyword": "\uc624\uc774", "value": 2}, {"day": "2026-04-19", "keyword": "\uc885\uc790 \uc218\ucd9c", "value": 2}, {"day": "2026-04-19", "keyword": "\uc885\uc790\uc0b0\uc5c5", "value": 1}, {"day": "2026-04-19", "keyword": "\ucc38\uc678", "value": 1}, {"day": "2026-04-20", "keyword": "\uac80\uc5ed", "value": 6}, {"day": "2026-04-20", "keyword": "\uace0\ucd94", "value": 4}, {"day": "2026-04-20", "keyword": "\ub2f9\uadfc", "value": 5}, {"day": "2026-04-20", "keyword": "\ub300\ud30c", "value": 6}, {"day": "2026-04-20", "keyword": "\uba54\ub860", "value": 2}, {"day": "2026-04-20", "keyword": "\ubc30\ucd94", "value": 9}, {"day": "2026-04-20", "keyword": "\ubcd1\ud574\ucda9", "value": 5}, {"day": "2026-04-20", "keyword": "\ube0c\ub85c\ucf5c\ub9ac", "value": 6}, {"day": "2026-04-20", "keyword": "\uc0c1\ucd94", "value": 7}, {"day": "2026-04-20", "keyword": "\uc218\ubc15", "value": 9}, {"day": "2026-04-20", "keyword": "\uc2dc\uae08\uce58", "value": 1}, {"day": "2026-04-20", "keyword": "\uc2dd\ubb3c\uc2e0\ud488\uc885", "value": 2}, {"day": "2026-04-20", "keyword": "\uc591\ubc30\ucd94", "value": 6}, {"day": "2026-04-20", "keyword": "\uc591\uc0c1\ucd94", "value": 2}, {"day": "2026-04-20", "keyword": "\uc624\uc774", "value": 6}, {"day": "2026-04-20", "keyword": "\uc721\uc885", "value": 1}, {"day": "2026-04-20", "keyword": "\uc885\ubb18", "value": 9}, {"day": "2026-04-20", "keyword": "\uc885\uc790 \uc218\uc785", "value": 1}, {"day": "2026-04-20", "keyword": "\uc885\uc790\uc0b0\uc5c5", "value": 7}, {"day": "2026-04-20", "keyword": "\ucc38\uc678", "value": 8}, {"day": "2026-04-20", "keyword": "\ucc44\uc18c \uc885\uc790", "value": 10}, {"day": "2026-04-20", "keyword": "\ud1a0\ub9c8\ud1a0", "value": 8}, {"day": "2026-04-20", "keyword": "\ud488\uc885\ubcf4\ud638", "value": 2}];
+    const keywordLabels = keywordSeries.labels || [];
+    const keywordDatasets = (keywordSeries.series || []).map((series, index) => ({
+      label: series.label,
+      data: series.values,
+      borderWidth: 2,
+      borderColor: ["#00984b", "#4aa96c", "#6dbd84", "#9ad0a9", "#0f5a34"][index % 5],
+      backgroundColor: "transparent",
+      tension: 0.3,
+      pointRadius: 2,
+    }));
+
+    const chartElement = document.getElementById("publishedKeywordChart");
+    if (chartElement && keywordLabels.length && keywordDatasets.length) {
+      new Chart(chartElement, {
+        type: "line",
+        data: {
+          labels: keywordLabels,
+          datasets: keywordDatasets,
+        },
+        options: {
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: "bottom",
+              labels: {
+                boxWidth: 10,
+                usePointStyle: true,
+              },
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                precision: 0,
+              },
+            },
+          },
+        },
+      });
+    }
+  </script>
 </body>
 </html>
