@@ -250,6 +250,26 @@ tbody td {
   color: var(--muted);
 }
 
+.published-extra-row.is-hidden {
+  display: none;
+}
+
+.published-extra-row:not(.is-hidden) {
+  animation: publishedRowReveal 220ms ease both;
+}
+
+@keyframes publishedRowReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 900px) {
   .page-shell {
     width: min(100% - 20px, 1180px);
