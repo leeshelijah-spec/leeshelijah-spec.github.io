@@ -97,6 +97,11 @@ a {
   gap: 12px;
 }
 
+.section-actions {
+  display: flex;
+  gap: 8px;
+}
+
 .download-button {
   display: inline-flex;
   align-items: center;
@@ -296,6 +301,11 @@ tbody td {
   .section-head {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .section-actions {
+    flex-direction: column;
+    width: 100%;
   }
 
   .download-button {
